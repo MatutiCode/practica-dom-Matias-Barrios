@@ -3,7 +3,7 @@ const personajes = [
     id: 1,
     nombre: "A-Bomb",
     imagen:
-      "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+      "hhttps://i.pinimg.com/736x/6e/85/5d/6e855d78117c6752047968223579ed83.jpg",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const personajes = [
       "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/5-abraxas.jpg",
   },
 ];
-let catalogo = [...personajes];
+let catalogo = [personajes];
 let nextId = 6;
 
 const contenedorCards = document.getElementById("contenedorCards");

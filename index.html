@@ -4,16 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galería Superhéroes</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div id="contenedorCards" class="row g-4"></div>
-    <script src="assets/js/APP.js"></script>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand">Catalogo de superhéroes</span>
+      </div>
+    </nav>
+    <main class="container py-5">
+      <div class="mb-4">
+        <div class="input-group">
+          <input
+            type="text"
+            id="inputFiltro"
+            class="form-control"
+            placeholder="Buscar Personaje"
+          />
+          <button class="btn btn-success" id="btnFiltrar">Buscar</button>
+          <button class="btn btn-danger" id="btnReset">Borrar</button>
+        </div>
+      </div>
+      <div class="card bg-dark border-secondary mb-4">
+        <div class="card-body">
+          <div class="row g-3 align-items-end">
+            <div class="col-md-5">
+              <label class="form-label text-light">Nombre</label>
+              <input
+                type="text"
+                id="inputNombre"
+                class="form-control"
+                placeholder="Ej: Thor"
+              />
+            </div>
+            <div class="col-md-5">
+              <label class="form-label text-light">URL de la imagen</label>
+              <input
+                type="url"
+                id="inputImagen"
+                class="form-control"
+                placeholder="https://"
+              />
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-warning w-100" id="btnAgregar">
+                Añadir
+              </button>
+            </div>
+          </div>
+          <div
+            id="alertFormulario"
+            class="alert alert-warning mt-3 d-none"
+          ></div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
