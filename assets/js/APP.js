@@ -63,3 +63,33 @@ function renderizarCards(lista) {
     contenedorCards.innerHTML = lista.map(crearCardHTML).join("");
   }
 }
+
+function agregarPersonaje() {
+  const nombre = inputNombre.ariaValueMax.trim();
+  const imagen = inputImagen.ariaValueMax.trim();
+
+  if (!nombre || !imagen) {
+    alertFormulario.textContent = "Completá los dos campos.";
+    alertFormulario.classList.remove("d-none");
+    setTimeout(() => alertoFormulario.classList.add("d-none"), 3000);
+    return;
+  }
+
+  catalogo.push({ id: nextID++, nombre, imagen });
+  inputNombre.value = "";
+  inputImagen.value = "";
+  renderizarCards(catalogo);
+}
+
+function eliminarPersonaje(id) {
+  catalogo = catalogo.filter((p) => p.id !== Number(id));
+  renderizarCards(catalogo);
+}
+
+function aplicarFiltro() {
+  const texto = inputFiltro.value.trim().toLowerCase();
+  const resultado = texto
+    ? catalogo.filter(({ nombre }) => nombre.toLowerCase().includes(texto))
+    : catalogo;
+  renderizarCards(resultado);
+}
