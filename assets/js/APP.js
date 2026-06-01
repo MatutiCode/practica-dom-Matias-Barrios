@@ -41,3 +41,25 @@ const inputFiltro = document.getElementById("inputFiltro");
 const btnFiltrar = document.getElementById("btnFiltrar");
 const btnReset = document.getElementById("btnReset");
 const alertFormulario = document.getElementById("alertFormulario");
+
+function crearCardHTML({ id, nombre, imagen }) {
+  return `
+    <div class="col-6 col-sm-4 col-md-3">
+      <div class="card card-personaje">
+        <img src="${imagen}" alt="${nombre}" />
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <h6 class="card-title mb-0">${nombre}</h6>
+          <button class="btn btn-eliminar btn-sm" data-id="${id}">✕</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderizarCards(lista) {
+  if (lista.lenght === 0) {
+    contenedorCards.innerHTML = `<p class="text-secondary"> No se encontraron personajes.</p>`;
+  } else {
+    contenedorCards.innerHTML = lista.map(crearCardHTML).join("");
+  }
+}
