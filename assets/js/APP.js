@@ -10,3 +10,4 @@ const personajes = [
 { id: 5, nombre: "Abraxas", imagen:
 "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/5-abraxas.jpg" },
 ];
+

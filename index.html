@@ -13,6 +13,88 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <header class="d-flex justify-content-center bg-dark text-white">
+      <h1>Catalogo de Superhéroes</h1>
+    </header>
+    <div></div>
+    <main>
+      <div class="d-flex justify-content-center mt-5">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever="@mdo"
+        >
+          Buscar personaje
+        </button>
+      </div>
+      <div
+        class="modal fadex"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Busca al personaje
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"
+                    >Nombre del personaje:</label
+                  >
+                  <input type="text" class="form-control" id="recipient-name" />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >URL de la imagen del personaje:</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="button" class="btn btn-primary">Buscar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <!-- <div class="col-4 my-2">
+          <div class="card w-100 h-100" style="width: 18rem">
+            <img
+              src="https://i.pinimg.com/originals/c3/e1/d3/c3e1d329648a2461a8e479e396d2d58c.gif"
+              class="card-img-top"
+              alt="mi gif"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">guiso</p>
+              <a href="#" class="btn btn-primary">god</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
