@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.card-personaje {
+  background-color: black;
+  border: 1px solid darkgrey;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+  height: 100%;
+}
+
+.card-personaje:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px;
+  border-color: yellow;
+}
+
+.card-personaje img {
+  object-fit: cover;
+  height: 260px;
+  width: 100%;
+}
+
+.card-personaje .card-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: 1px solid #2a2a30;
+  color: gray;
+  font-size: 0.75rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-eliminar:hover {
+  background: rgb(211, 90, 90);
+  border-color: rgb(211, 90, 90);
+  color: white;
+}
