@@ -93,3 +93,17 @@ function aplicarFiltro() {
     : catalogo;
   renderizarCards(resultado);
 }
+
+btnAgregar.addEventListener("click", agregarPersonaje);
+btnFiltrar.addEventListener("click", aplicarFiltro);
+btnReset.addEventListener("click", () => {
+  inputFiltro.value = "";
+  renderizarCards(catalogo);
+});
+
+contenedorCards.addEventListener("click", (e) => {
+  const boton = e.target.closest(".btn-eliminar");
+  if (boton) eliminarPersonaje(boton.dataset.id);
+});
+
+renderizarCards(catalogo);
