@@ -3,7 +3,7 @@ const personajes = [
     id: 1,
     nombre: "A-Bomb",
     imagen:
-      "https://i.pinimg.com/736x/6e/85/5d/6e855d78117c6752047968223579ed83.jpg",
+      "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
   },
   {
     id: 2,
