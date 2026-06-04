@@ -3,7 +3,7 @@ const personajes = [
     id: 1,
     nombre: "A-Bomb",
     imagen:
-      "hhttps://i.pinimg.com/736x/6e/85/5d/6e855d78117c6752047968223579ed83.jpg",
+      "https://i.pinimg.com/736x/6e/85/5d/6e855d78117c6752047968223579ed83.jpg",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const personajes = [
       "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/5-abraxas.jpg",
   },
 ];
-let catalogo = [personajes];
+let catalogo = [...personajes];
 let nextId = 6;
 
 const contenedorCards = document.getElementById("contenedorCards");
@@ -57,25 +57,25 @@ function crearCardHTML({ id, nombre, imagen }) {
 }
 
 function renderizarCards(lista) {
-  if (lista.lenght === 0) {
-    contenedorCards.innerHTML = `<p class="text-secondary"> No se encontraron personajes.</p>`;
+  if (lista.length === 0) {
+    contenedorCards.innerHTML = `<p class="text-secondary">No se encontraron personajes.</p>`;
   } else {
     contenedorCards.innerHTML = lista.map(crearCardHTML).join("");
   }
 }
 
 function agregarPersonaje() {
-  const nombre = inputNombre.ariaValueMax.trim();
-  const imagen = inputImagen.ariaValueMax.trim();
+  const nombre = inputNombre.value.trim();
+  const imagen = inputImagen.value.trim();
 
   if (!nombre || !imagen) {
     alertFormulario.textContent = "Completá los dos campos.";
     alertFormulario.classList.remove("d-none");
-    setTimeout(() => alertoFormulario.classList.add("d-none"), 3000);
+    setTimeout(() => alertFormulario.classList.add("d-none"), 3000);
     return;
   }
 
-  catalogo.push({ id: nextID++, nombre, imagen });
+  catalogo.push({ id: nextId++, nombre, imagen });
   inputNombre.value = "";
   inputImagen.value = "";
   renderizarCards(catalogo);
